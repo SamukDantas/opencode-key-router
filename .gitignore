@@ -1,0 +1,7 @@
+# Segredos reais - nunca commitar
+keys/profiles.json
+keys/shared.json
+*.bak*
+
+# Dependências
+node_modules/

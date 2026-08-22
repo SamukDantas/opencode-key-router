@@ -1,0 +1,214 @@
+{
+    "plugin": [
+        "rtk-for-opencode"
+    ],
+    "$schema": "https://opencode.ai/config.json",
+    "share": "disabled",
+    "autoupdate": false,
+    "mcp": {
+        "github": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@modelcontextprotocol/server-github"
+            ],
+            "enabled": true,
+            "environment": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_TOKEN}"
+            }
+        },
+        "context7": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "enabled": true,
+            "environment": {
+                "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+            }
+        },
+        "testsprite": {
+            "type": "local",
+            "command": [
+                "npx",
+                "@testsprite/testsprite-mcp@latest"
+            ],
+            "enabled": true,
+            "environment": {
+                "API_KEY": "{env:TESTSPRITE_API_KEY}"
+            }
+        },
+        "supabase": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@supabase/mcp-server-supabase@latest"
+            ],
+            "enabled": true,
+            "environment": {
+                "SUPABASE_ACCESS_TOKEN": "{env:SUPABASE_ACCESS_TOKEN}"
+            }
+        },
+        "vercel": {
+            "type": "local",
+            "command": [
+                "npx",
+                "mcp-remote",
+                "https://mcp.vercel.com"
+            ],
+            "enabled": true
+        },
+        "docker": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "mcp-server-docker"
+            ],
+            "enabled": true
+        },
+        "kubernetes": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "kubernetes-mcp-server@latest"
+            ],
+            "enabled": false
+        },
+        "blender": {
+            "type": "local",
+            "command": [
+                "cmd",
+                "/c",
+                "uvx",
+                "blender-mcp"
+            ],
+            "enabled": false
+        },
+        "unityMCP": {
+            "type": "remote",
+            "url": "http://localhost:8080/mcp",
+            "enabled": false
+        },
+        "newrelic": {
+            "type": "local",
+            "command": [
+                "uv",
+                "tool",
+                "run",
+                "newrelic-mcp-server"
+            ],
+            "enabled": true,
+            "environment": {
+                "NEWRELIC_API_KEY": "{env:NEWRELIC_API_KEY}",
+                "NEWRELIC_ACCOUNT_ID": "{env:NEWRELIC_ACCOUNT_ID}",
+                "NEWRELIC_REGION": "US"
+            }
+        },
+        "trello": {
+            "type": "local",
+            "command": [
+                "node",
+                "C:/Users/Samuel/.config/opencode/mcp-servers/trello/dist/index.js"
+            ],
+            "enabled": true
+        },
+        "prometheus": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "--with",
+                "prometheus-mcp-server",
+                "prometheus-mcp-server"
+            ],
+            "enabled": true,
+            "environment": {
+                "PROMETHEUS_URL": "http://localhost:9090"
+            }
+        },
+        "grafana": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "mcp-grafana"
+            ],
+            "enabled": true,
+            "environment": {
+                "GRAFANA_URL": "http://localhost:3000",
+                "GRAFANA_SERVICE_ACCOUNT_TOKEN": "{env:GRAFANA_SERVICE_ACCOUNT_TOKEN}"
+            }
+        },
+        "th0th": {
+            "type": "local",
+            "command": [
+                "docker",
+                "compose",
+                "-f",
+                "C:/Users/Samuel/.config/opencode/th0th/docker-compose.yml",
+                "run",
+                "--rm",
+                "-i",
+                "-e",
+                "TH0TH_API_URL=http://host.docker.internal:3333",
+                "mcp"
+            ],
+            "enabled": true
+        },
+        "ngrok": {
+            "type": "local",
+            "command": [
+                "node",
+                "C:/Users/Samuel/.config/opencode/mcp-servers/ngrok/dist/index.js"
+            ],
+            "enabled": true
+        },
+        "upstash": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/mcp-server@latest",
+                "--disable-telemetry"
+            ],
+            "enabled": true,
+            "environment": {
+                "UPSTASH_EMAIL": "{env:UPSTASH_EMAIL}",
+                "UPSTASH_API_KEY": "{env:UPSTASH_API_KEY}"
+            }
+        },
+        "chrome-devtools": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "chrome-devtools-mcp@latest"
+            ],
+            "enabled": true
+        },
+        "windows-mcp": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "windows-mcp",
+                "serve"
+            ],
+            "enabled": true
+        },
+        "resend": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "resend-mcp"
+            ],
+            "enabled": true,
+            "environment": {
+                "RESEND_API_KEY": "{env:RESEND_API_KEY}"
+            }
+        }
+    }
+}
