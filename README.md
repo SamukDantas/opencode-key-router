@@ -39,7 +39,7 @@ Opcao: 2
 ## Adicionando um perfil/account
 
 1. Copie `keys/profiles.example.json` para `keys/profiles.json` (se ainda não existir).
-2. Adicione uma entrada em `profiles` com `id`, `label`, `github_token` e o bloco `env` (chaves dos serviços).
+2. Adicione uma entrada em `profiles` com `id`, `label`, `github_token`, `git_name`, `git_email` e o bloco `env` (chaves dos serviços).
 3. Chaves compartilhadas entre todos os perfis ficam em `keys/shared.json`.
 
 ### Serviços com chave por perfil
@@ -53,6 +53,7 @@ Opcao: 2
 | Grafana | `GRAFANA_SERVICE_ACCOUNT_TOKEN` |
 | Upstash | `UPSTASH_API_KEY`, `UPSTASH_EMAIL` |
 | TestSprite | `TESTSPRITE_API_KEY` |
+| OpenCode Go | `OPENCODE_API_KEY` |
 
 ### Compartilhados (não alternam)
 
@@ -61,6 +62,8 @@ Opcao: 2
 | Context7 | `CONTEXT7_API_KEY` |
 
 > **Vercel**: a autenticação é via CLI (`vercel login` / `vercel switch`), não por variável de ambiente — troque manualmente ao alternar de conta.
+
+> **OpenCode Go**: autentique o provider via env var `OPENCODE_API_KEY`. Se o Go estiver salvo no auth store (`/connect`), remova com `opencode auth logout` para a env var assumir.
 
 ## Segurança
 

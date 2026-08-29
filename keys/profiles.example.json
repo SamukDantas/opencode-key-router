@@ -4,6 +4,8 @@
       "id": "1",
       "label": "Exemplo Perfil 1",
       "github_token": "ghp_SEU_TOKEN",
+      "git_name": "Seu Nome",
+      "git_email": "voce@exemplo.com",
       "env": {
         "SUPABASE_ACCESS_TOKEN": "sbp_...",
         "RESEND_API_KEY": "re_...",
@@ -12,13 +14,16 @@
         "GRAFANA_SERVICE_ACCOUNT_TOKEN": "glsa_...",
         "UPSTASH_API_KEY": "uuid",
         "UPSTASH_EMAIL": "email@exemplo.com",
-        "TESTSPRITE_API_KEY": "sk-member-..."
+        "TESTSPRITE_API_KEY": "sk-member-...",
+        "OPENCODE_API_KEY": "sk-..."
       }
     },
     {
       "id": "2",
       "label": "Exemplo Perfil 2",
       "github_token": "ghp_SEU_TOKEN",
+      "git_name": "Outro Nome",
+      "git_email": "outro@exemplo.com",
       "env": {
         "SUPABASE_ACCESS_TOKEN": "sb_secret_...",
         "RESEND_API_KEY": "re_...",
@@ -27,7 +32,8 @@
         "GRAFANA_SERVICE_ACCOUNT_TOKEN": "glsa_...",
         "UPSTASH_API_KEY": "uuid",
         "UPSTASH_EMAIL": "outro@exemplo.com",
-        "TESTSPRITE_API_KEY": "sk-member-..."
+        "TESTSPRITE_API_KEY": "sk-member-...",
+        "OPENCODE_API_KEY": "sk-..."
       }
     }
   ]
