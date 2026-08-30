@@ -5,6 +5,30 @@
     "$schema": "https://opencode.ai/config.json",
     "share": "disabled",
     "autoupdate": false,
+    "provider": {
+        "oci": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "Sensedia AI",
+            "options": {
+                "baseURL": "https://us-ai-gateway-lab.sensedia-eng.com/models/qwen3.6-35b"
+            },
+            "models": {
+                "oci": {
+                    "name": "Qwen3.6",
+                    "attachment": true,
+                    "modalities": {
+                        "input": [
+                            "text",
+                            "image"
+                        ],
+                        "output": [
+                            "text"
+                        ]
+                    }
+                }
+            }
+        }
+    },
     "mcp": {
         "github": {
             "type": "local",
@@ -209,6 +233,11 @@
             "environment": {
                 "RESEND_API_KEY": "{env:RESEND_API_KEY}"
             }
+        },
+        "appwrite": {
+            "type": "remote",
+            "enabled": true,
+            "url": "https://mcp.appwrite.io/"
         }
     }
 }
